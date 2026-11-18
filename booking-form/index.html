@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Student name: Luana Francisca Carvalho Alves -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a walk - Hillside Walking Club</title>
+</head>
+
+<body>
+    <header>
+        <h1>Book a walk</h1>
+    </header>
+
+    <main>
+        <p>Tell us which walk you would like to join, and we will save you a place.</p>
+
+        <form action="index.html" method="post">
+            <p>
+                <label for="full-name">Full name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </p>
+
+            <p>
+                <label for="email-address">Email address</label>
+                <input type="email" id="email-address" name="email-address" placeholder="name@example.com" required>
+            </p>
+
+            <p>
+                <label for="membership-number">Membership number, if you have one</label>
+                <input type="text" id="membership-number" name="membership-number" pattern="[0-9]{5}"
+                    title="Five digits">
+            </p>
+
+            <p>
+                <label for="group-size">How many are in your group?</label>
+                <input type="number" id="group-size" name="group-size" min="1" max="8" required>
+            </p>
+
+            <p>
+                <label for="which-saturday">Which Saturday would you like?</label>
+                <input type="date" id="which-saturday" name="which-saturday" min="2026-10-17" max="2026-12-19" required>
+            </p>
+
+            <fieldset>
+                <legend>Which walk would you like to join?</legend>
+                <input type="radio" id="ridge-walk" name="walk-choice" value="ridge-walk" required>
+                <label for="ridge-walk">Ridge walk</label>
+                <input type="radio" id="lake-walk" name="walk-choice" value="lake-walk">
+                <label for="lake-walk">Lake walk</label>
+                <input type="radio" id="valley-walk" name="walk-choice" value="valley-walk">
+                <label for="valley-walk">Valley walk</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What will you bring?</legend>
+                <input type="checkbox" id="walking-poles" name="walking-poles" value="walking-poles">
+                <label for="walking-poles">Walking poles</label>
+                <input type="checkbox" id="waterproofs" name="waterproofs" value="waterproofs">
+                <label for="waterproofs">Waterproofs</label>
+                <input type="checkbox" id="a-flask" name="a-flask" value="a-flask">
+                <label for="a-flask">A flask</label>
+                <input type="checkbox" id="a-camera" name="a-camera" value="a-camera">
+                <label for="a-camera">A camera</label>
+            </fieldset>
+
+            <p>
+                <label for="meeting-point">Where will you meet us?</label>
+                <select id="meeting-point" name="meeting-point" required>
+                    <option value="">Choose a meeting point</option>
+                    <option value="lake-car-park">The lake car park</option>
+                    <option value="railway-station">The railway station</option>
+                    <option value="village-hall">The village hall</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="fitness-level">How fit do you feel, from 1 to 10?</label>
+                <input type="range" id="fitness-level" name="fitness-level" min="1" max="10" value="5">
+            </p>
+
+            <p>
+                <label for="extra-notes">Anything we should know?</label>
+            </p>
+            <p>
+                <textarea id="extra-notes" name="extra-notes" rows="4" cols="50"
+                    placeholder="For example, a knee that does not like hills."></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Book the walk</button>
+                <button type="reset">Start again</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Hillside Walking Club</p>
+    </footer>
+</body>
+
+</html>
