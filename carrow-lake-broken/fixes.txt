@@ -1,0 +1,11 @@
+1. index.html: The Prices link gave a file not found error because it pointed to "prices.html" instead of "pages/prices.html". Fixed by changing href to "pages/prices.html".
+2. index.html: The main picture did not show because src pointed to "images/ridge.jpeg" instead of "images/ridge.jpg". Fixed the file extension to ".jpg".
+3. index.html: The email address in the footer did not appear on the page because "<boats@example.com>" was written with raw angle brackets and treated as an HTML tag. Fixed by replacing them with "&lt;boats@example.com&gt;".
+4. hire.html: The Home link gave a file not found error because href was written as "index.htm" (missing the "l"). Fixed by changing href to "index.html".
+5. hire.html: The lake picture did not show because src used a local Windows path ("C:\Users\Student\Pictures\lake.jpg"). Fixed by changing src to the relative path "images/lake.jpg".
+6. pages/prices.html: The compass picture did not show because src pointed to "images/compass.jpg" instead of going up one folder level. Fixed by changing src to "../images/compass.jpg".
+7. pages/prices.html: The logo used a capital "L" ("../images/Logo.svg"), which works on Windows but breaks on case-sensitive web servers since the file is "logo.svg". Fixed by changing it to "../images/logo.svg".
+
+Validator notes:
+Before fixing, the W3C Validator only reported the unescaped "<boats@example.com>" tag error in index.html. It did not report any of the broken links or missing image paths because the HTML syntax of the <a> and <img> 
+tags was valid, and the validator only checks HTML structure rather than whether linked files exist on disk. After fixing, all three pages pass with no errors or warnings.
